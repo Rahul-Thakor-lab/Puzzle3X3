@@ -1,0 +1,217 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+body::before,
+body::after {
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: fixed;
+}
+
+body::before {
+    background: linear-gradient(red, #ffc107);
+    clip-path: circle(14% at 5% 20%);
+}
+
+body::after {
+    background: linear-gradient(#fff, #1970ca);
+    clip-path: circle(14% at 90% 70%);
+    z-index: -1;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+#popup {
+    position: absolute;
+    margin: 15%;
+    height: 230px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, .15);
+    border-radius: 13px;
+    visibility: hidden;
+}
+
+#popup.active {
+    visibility: visible;
+    backdrop-filter: blur(3px);
+}
+
+#clsbtn {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    right: 0px;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clsbtn img {
+    height: 15px;
+    width: 15px;
+}
+
+#cong {
+    height: 70%;
+    background-image: url('img/cong.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#msg {
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman";
+}
+
+#game {
+    border: 3px solid rgb(210, 210, 210);
+    border-radius: 4px;
+    background-image: url("img/back.jpg");
+    background-size: cover;
+}
+
+#headcont {
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+}
+
+.head {
+    width: 102px;
+}
+
+.head.reload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head.reload div {
+    background: rgba(255, 255, 255, .6);
+    padding: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
+    border-radius: 50px;
+}
+
+.head.reload div img {
+    height: 25px;
+    width: 25px;
+}
+
+#board {
+    padding: 22px 60px;
+
+}
+
+#gameBoard {
+    width: 258px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.space {
+    height: 82px;
+    width: 82px;
+    margin: 2px;
+
+}
+
+.block {
+    height: 100%;
+    background-size: 246px 246px;
+    border: 1px solid rgb(98, 240, 238);
+}
+
+#block1 {
+    background-position: left top;
+}
+
+#block2 {
+    background-position: center top;
+
+}
+
+#block3 {
+    background-position: right top;
+}
+
+#block4 {
+    background-position: left center;
+}
+
+#block5 {
+    background-position: center center;
+}
+
+#block6 {
+    background-position: right center;
+}
+
+#block7 {
+    background-position: left bottom;
+}
+
+#block8 {
+    background-position: center bottom;
+}
+
+#block9 {
+    background-position: right bottom;
+}
+
+.blockNo {
+    width: 20px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(214, 234, 208, 0.5);
+    border: 1px solid rgb(42, 53, 37);
+    border-radius: 50px;
+}
+
+img {
+    height: 12px;
+    width: 12px;
+}
+
+p {
+    font-size: 5vw;
+    color: white;
+}
